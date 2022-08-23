@@ -1,0 +1,268 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+body {
+  color: #000;
+  word-break: break-all;
+  font-size: 18px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.8;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2 {
+  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  color: #fff;
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+nav {
+  font-family: "Nunito", sans-serif;
+}
+nav a {
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 84.39px;
+  position: fixed;
+}
+
+.header_wrapper {
+  width: 92%;
+  padding: 10px 4% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_wrapper nav li {
+  display: inline-block;
+  margin-right: 50px;
+}
+.header_wrapper nav li:last-child {
+  margin-right: 0;
+}
+
+.wrapper {
+  padding: 10vh 2%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.section_title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.section_title h2 {
+  margin-bottom: 10px;
+}
+.section_title span {
+  color: #144E94;
+  font-weight: bold;
+}
+
+.link_btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #000;
+}
+.link_btn a {
+  font-weight: bold;
+  color: #144E94;
+}
+
+.contact {
+  background-color: rgba(20, 78, 148, 0.2);
+}
+.contact_form {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 500px;
+}
+.contact_form_title {
+  width: 200px;
+  font-size: 22px;
+}
+.contact_form_box {
+  position: absolute;
+  right: 0;
+  padding-left: 8px;
+  width: 350px;
+  height: 40px;
+  font-size: 18px;
+}
+.contact_form_textarea {
+  position: absolute;
+  right: 0;
+  padding: 8px;
+  width: 346px;
+  height: 200px;
+  font-size: 18px;
+}
+.contact_box {
+  margin-bottom: 25px;
+}
+.contact_box:last-child {
+  margin-bottom: 0;
+}
+.contact_btn {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 63px);
+  display: inline-block;
+  padding: 10px 40px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #144E94;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #082F50;
+}
+footer p {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav a {
+  color: #144E94;
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "../base/reset";
+@import "../base/base";
+@import "../config";
+@import "../common";
+
+nav {
+  a{
+    color: $cBlue;
+  }
+}

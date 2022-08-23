@@ -1,0 +1,45 @@
+.service {
+  &_text {
+    h3{
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      border-bottom: 3px solid $cLight_Blue;
+      font-size: 24px;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+
+  &_content{
+    position: relative;
+    
+    &_item{
+      display: inline-block;
+      padding: 50px;
+      width: 300px;
+      border: 1px solid $cBlack;
+      background-color: $cWhite;
+      text-align: center;
+    }
+
+    .item1{
+      position: relative;
+      z-index: 2;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .item2{
+      margin-top: -200px;
+    }
+    
+    .item3{
+      position: absolute;
+      right: 0;
+      margin-top: -200px;
+    }
+  }
+}

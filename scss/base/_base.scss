@@ -1,0 +1,48 @@
+@import "../config";
+
+body {
+  color: $cBlack;
+  word-break: break-all;
+  font-size: 18px;
+  font-family: $font;
+  line-height: 1.8;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  color: $cBlack;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,h2 {
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  color: $cWhite;
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+nav {
+  font-family: 'Nunito', sans-serif;
+  a{
+    color: $cWhite;
+  }
+}

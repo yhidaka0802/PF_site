@@ -1,0 +1,38 @@
+.skill {
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+    height: 70px;
+    &:nth-child(2n){
+      margin-left: 50px;
+    }
+  }
+
+  &_img{
+    margin-right: 20px;
+    width: 64px;
+    height: 64px;
+  }
+
+  &_text {
+    width: 400px;
+    p {
+      position: relative;
+      span {
+        position: absolute;
+        left: 150px;
+      }
+    }
+  }
+  
+  .sass i{
+    padding-top: 8px;
+  }
+}

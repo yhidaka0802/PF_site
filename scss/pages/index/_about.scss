@@ -1,0 +1,45 @@
+.about {
+  &_content{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  &_img{
+    width: 250px;
+    height: 250px;
+    img {
+      height: 100%;
+
+      object-fit: cover;
+      object-position: left center;
+    }
+  }
+  
+  &_text {
+    position: relative;
+    margin-left: 26px;
+    width: 530px;
+
+    h3 {
+      display: inline-block;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $cLight_Blue;
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .link_btn {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.about_twitter {
+  margin: 0 auto;
+  width: 80%;
+  height: 30vh;
+  border: 1px solid $cBlack;
+}

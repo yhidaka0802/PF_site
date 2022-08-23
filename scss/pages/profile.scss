@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@import "../base/reset";
+@import "../base/base";
+@import "../config";
+@import "../common";
+
+nav {
+  a{
+    color: $cBlue;
+  }
+}
+
+.profile {
+  padding-top: 100px;
+
+  &_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 900px;
+  }
+
+  &_text {
+    width: 580px;
+
+    &_content {
+      margin-bottom: 24px;
+
+      h3 {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+        border-bottom: 3px solid $cLight_Blue;
+        font-size: 36px;
+        line-height: 1;
+      }
+      h4 {
+        color: $cBlue;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &_img {
+    width: 250px;
+    height: 250px;
+    img {
+      height: 100%;
+
+      object-fit: cover;
+      object-position: left center;
+    }
+  }
+}

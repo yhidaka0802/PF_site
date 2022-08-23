@@ -1,0 +1,417 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+body {
+  color: #000;
+  word-break: break-all;
+  font-size: 18px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.8;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2 {
+  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  color: #fff;
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+nav {
+  font-family: "Nunito", sans-serif;
+}
+nav a {
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 84.39px;
+  position: fixed;
+}
+
+.header_wrapper {
+  width: 92%;
+  padding: 10px 4% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_wrapper nav li {
+  display: inline-block;
+  margin-right: 50px;
+}
+.header_wrapper nav li:last-child {
+  margin-right: 0;
+}
+
+.wrapper {
+  padding: 10vh 2%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.section_title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.section_title h2 {
+  margin-bottom: 10px;
+}
+.section_title span {
+  color: #144E94;
+  font-weight: bold;
+}
+
+.link_btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #000;
+}
+.link_btn a {
+  font-weight: bold;
+  color: #144E94;
+}
+
+.contact {
+  background-color: rgba(20, 78, 148, 0.2);
+}
+.contact_form {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 500px;
+}
+.contact_form_title {
+  width: 200px;
+  font-size: 22px;
+}
+.contact_form_box {
+  position: absolute;
+  right: 0;
+  padding-left: 8px;
+  width: 350px;
+  height: 40px;
+  font-size: 18px;
+}
+.contact_form_textarea {
+  position: absolute;
+  right: 0;
+  padding: 8px;
+  width: 346px;
+  height: 200px;
+  font-size: 18px;
+}
+.contact_box {
+  margin-bottom: 25px;
+}
+.contact_box:last-child {
+  margin-bottom: 0;
+}
+.contact_btn {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 63px);
+  display: inline-block;
+  padding: 10px 40px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #144E94;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #082F50;
+}
+footer p {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(20, 78, 148, 0.68);
+}
+
+.about_content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.about_img {
+  width: 250px;
+  height: 250px;
+}
+.about_img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left center;
+     object-position: left center;
+}
+.about_text {
+  position: relative;
+  margin-left: 26px;
+  width: 530px;
+}
+.about_text h3 {
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #00FFFA;
+  font-size: 36px;
+  line-height: 1;
+}
+.about_text .link_btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.about_twitter {
+  margin: 0 auto;
+  width: 80%;
+  height: 30vh;
+  border: 1px solid #000;
+}
+
+.service_text h3 {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  border-bottom: 3px solid #00FFFA;
+  font-size: 24px;
+}
+.service_text p {
+  text-align: left;
+}
+.service_content {
+  position: relative;
+}
+.service_content_item {
+  display: inline-block;
+  padding: 50px;
+  width: 300px;
+  border: 1px solid #000;
+  background-color: #fff;
+  text-align: center;
+}
+.service_content .item1 {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+}
+.service_content .item2 {
+  margin-top: -200px;
+}
+.service_content .item3 {
+  position: absolute;
+  right: 0;
+  margin-top: -200px;
+}
+
+.skill_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skill_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 56px;
+  height: 70px;
+}
+.skill_item:nth-child(2n) {
+  margin-left: 50px;
+}
+.skill_img {
+  margin-right: 20px;
+  width: 64px;
+  height: 64px;
+}
+.skill_text {
+  width: 400px;
+}
+.skill_text p {
+  position: relative;
+}
+.skill_text p span {
+  position: absolute;
+  left: 150px;
+}
+.skill .sass i {
+  padding-top: 8px;
+}
+
+.work_content {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 200px;
+  width: 800px;
+}
+.work_list {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto 0;
+  width: 800px;
+}
+.work_item_img {
+  width: 350px;
+  height: 240px;
+}
+.work_item_img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.work_item_text {
+  margin-top: 20px;
+}
+.work_item_text p {
+  padding-left: 15px;
+  border-left: 3px solid #00FFFA;
+  line-height: 1.4;
+}
+.work .link_btn {
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+}
