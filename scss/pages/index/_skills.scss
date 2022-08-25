@@ -3,6 +3,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
+    @include mq(sp){
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
   }
 
   &_item {
@@ -12,6 +18,20 @@
     height: 70px;
     &:nth-child(2n){
       margin-left: 50px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    
+    @include mq(pc){
+      max-width: 500px;
+      padding: 0 50px;
+      &:nth-child(2n){
+        margin-left: 0;
+      }
+    }
+    @include mq(tb){
+      padding: 0;
     }
   }
 
@@ -23,11 +43,17 @@
 
   &_text {
     width: 400px;
+    @include mq(sp){
+      width: 200px;
+    }
     p {
       position: relative;
       span {
         position: absolute;
         left: 150px;
+        @include mq(sp){
+          left:  100px;
+        }
       }
     }
   }

@@ -17,8 +17,8 @@
   <body>
     <header>
       <div class="header_wrapper">
-        <a href="index.html"><img src="/images/logo_2.png" alt="ロゴ画像"></a>
-        <nav>
+        <a href="../index.html"><img src="/images/logo_2.png" alt="ロゴ画像"></a>
+        <nav id="g-nav">
           <ul>
             <li><a href="/index.html">HOME</a></li>
             <li><a href="/html/profile.html">PROFILE</a></li>
@@ -26,6 +26,7 @@
             <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
+        <div class="openbtn"><span></span><span></span><span></span></div>
       </div>
     </header>
     <main>
@@ -44,7 +45,7 @@
                 </div>
                 <div class="work_item_text_content">
                   <h4>サイトURL</h4>
-                  <p><a href="#">https:--</a></p>
+                  <p><a href="#">https::~~</a></p>
                 </div>
                 <div class="work_item_text_content">
                   <h4>担当範囲</h4>
@@ -55,16 +56,65 @@
                   <p>約１週間</p>
                 </div>
               </div>
-              <div class="work_item_img"><img src="/images/pf_1.png" alt="ポートフォリオの画像です。"></div>
+              <div class="work_item_img"><img src="/images/pf_1b.png" alt="ポートフォリオの画像です。"></div>
+            </li>
+            <li class="work_item">
+              <div class="work_item_text">
+                <div class="work_item_text_content">
+                  <h3>架空ポートフォリオサイト（HP）</h3>
+                  <p>プログラミングスクール様の教材にて、デザインカンプを元にコーディングした後、アレンジしたものを記載しております。</p>
+                </div>
+                <div class="work_item_text_content">
+                  <h4>サイトURL</h4>
+                  <p><a href="#">https::~~</a></p>
+                </div>
+                <div class="work_item_text_content">
+                  <h4>担当範囲</h4>
+                  <p>コーディング</p>
+                </div>
+                <div class="work_item_text_content">
+                  <h4>制作期間</h4>
+                  <p>約１週間</p>
+                </div>
+              </div>
+              <div class="work_item_img"><img src="/images/pf_2b.png" alt="ポートフォリオの画像です。"></div>
             </li>
           </ul>
         </div>
       </section>
+      <section class="contact" id="contact">
+        <div class="wrapper">
+          <div class="section_title">
+            <h2>Contact</h2>
+            <span>お問い合わせ</span>
+            <p>各種依頼やご相談などございましたら、まずはお気軽にご連絡ください。<br><span>*</span>は入力必須項目です。</p>
+          </div>
+          <form action="#" class="contact_form" id="form">
+            <div class="contact_box">
+              <label for="name" class="contact_form_title">お名前<span>*</span></label>
+              <input type="text" class="contact_form_box" id="name" placeholder="山田太郎" required>
+            </div>
+            <div class="contact_box">
+              <label for="e-mail" class="contact_form_title">メールアドレス<span>*</span></label>
+              <input type="text" class="contact_form_box" id="e-mail" placeholder="xxxxx@domain.com" required>
+            </div>
+            <div class="contact_box">
+              <label for="tel" class="contact_form_title">電話番号</label>
+              <input type="text" class="contact_form_box" placeholder="080-xxxx-xxxx" id="tel">
+            </div>
+            <div class="contact_box">
+              <label for="message" class="contact_form_title">お問い合わせ内容<span>*</span></label>
+              <textarea name="messafe" id="message" cols="30" rows="10" class="contact_form_textarea" placeholder="ご相談内容をご記入ください" required></textarea>
+            </div>
+            <button type="submit" class="contact_btn">Send</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <!-- <footer>
+    <footer>
       <p>© 2022 yh.Design All Right Reserved</p>
-    </footer> -->
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="/script/main.js"></script>
   </body>
 </html>

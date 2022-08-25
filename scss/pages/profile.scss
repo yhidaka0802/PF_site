@@ -3,11 +3,21 @@
 @import "../base/reset";
 @import "../base/base";
 @import "../config";
+@import "../mixin";
+@import "../animation";
 @import "../common";
 
 nav {
   a{
     color: $cBlue;
+  }
+}
+
+.openbtn {
+  border: 3px solid $cBlue;
+
+  span {
+    background-color: $cBlue;
   }
 }
 
@@ -18,11 +28,17 @@ nav {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
+
+    @include mq(tb){
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 50px;
+    }
   }
 
   &_text {
-    width: 580px;
+    max-width: 580px;
 
     &_content {
       margin-bottom: 24px;
@@ -34,10 +50,16 @@ nav {
         border-bottom: 3px solid $cLight_Blue;
         font-size: 36px;
         line-height: 1;
+        @include mq(sp){
+          font-size: 30px;
+        }
       }
       h4 {
         color: $cBlue;
         font-size: 24px;
+        @include mq(sp){
+          font-size: 20px;
+        }
       }
     }
   }

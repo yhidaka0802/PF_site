@@ -3,18 +3,31 @@
     position: relative;
     margin: 0 auto;
     padding-bottom: 200px;
-    width: 800px;
+    max-width: 800px;
+    @include mq(tb){
+      padding-bottom: 130px;
+    }
   }
 
   &_list {
     display: flex;
     justify-content: space-between;
     margin: 100px auto 0;
-    width: 800px;
+    max-width: 800px;
+    
+    @include mq(tb){
+      margin-top: 50px;
+      align-items: center;
+      flex-direction: column;
+    }
   }
   &_item {
+    @include mq(tb){
+      margin-bottom: 50px;
+    }
+
     &_img{
-      width: 350px;
+      max-width: 350px;
       height: 240px;
       img{
         height: 100%;
@@ -37,5 +50,9 @@
     position: absolute;
     right: 0;
     bottom: 70px;
+    
+    @include mq(tb){
+      right: calc(50% - 76px);
+    }
   }
 }

@@ -1,4 +1,5 @@
 @import "../config";
+@import "../mixin";
 
 body {
   color: $cBlack;
@@ -6,6 +7,12 @@ body {
   font-size: 18px;
   font-family: $font;
   line-height: 1.8;
+  position: relative;
+  z-index: 1;
+
+  @include mq(sp){
+    font-size: 14px;
+  }
 }
 
 main {
@@ -34,10 +41,21 @@ h1,h2 {
 h1 {
   color: $cWhite;
   font-size: 80px;
+  @include mq(tb){
+    font-size: 50px;
+  }
+  @include mq(sp){
+    width: 250px;
+    text-align: center;
+    line-height: 2;
+  }
 }
 
 h2 {
   font-size: 60px;
+  @include mq(sp){
+    font-size: 50px;
+  }
 }
 
 nav {

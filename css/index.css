@@ -114,6 +114,13 @@ body {
   font-size: 18px;
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 main {
@@ -143,9 +150,26 @@ h1 {
   color: #fff;
   font-size: 80px;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    width: 250px;
+    text-align: center;
+    line-height: 2;
+  }
+}
 
 h2 {
   font-size: 60px;
+}
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 50px;
+  }
 }
 
 nav {
@@ -155,18 +179,75 @@ nav a {
   color: #fff;
 }
 
+.openbtn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .openbtn {
+    position: relative;
+    z-index: 9999;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .openbtn span {
+    position: absolute;
+    left: 14px;
+    display: inline-block;
+    width: 45%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: all 0.4s;
+  }
+  .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+  .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+  .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+  .openbtn.active {
+    border: 3px solid #144E94;
+  }
+  .openbtn.active span {
+    background-color: #144E94;
+  }
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    width: 30%;
+    transform: translateY(6px) rotate(-45deg);
+  }
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    width: 30%;
+    transform: translateY(-6px) rotate(45deg);
+  }
+}
 header {
+  position: fixed;
+  z-index: 999;
   width: 100%;
   height: 84.39px;
-  position: fixed;
 }
 
 .header_wrapper {
-  width: 92%;
-  padding: 10px 4% 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 4% 0;
+  width: 92%;
 }
 .header_wrapper nav li {
   display: inline-block;
@@ -176,10 +257,53 @@ header {
   margin-right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  #g-nav {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: all 0.6s;
+  }
+  #g-nav.panelactive {
+    top: 0;
+  }
+  #g-nav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+  }
+  #g-nav li {
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  #g-nav a {
+    color: #144E94;
+  }
+}
+@media screen and (max-width: 480px) {
+  #g-nav li {
+    font-size: 24px;
+  }
+}
 .wrapper {
-  padding: 10vh 2%;
   margin: 0 auto;
+  padding: 10vh 2%;
   max-width: 1100px;
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 10vh 6%;
+  }
 }
 
 .section_title {
@@ -200,18 +324,31 @@ header {
   border: 1px solid #000;
 }
 .link_btn a {
-  font-weight: bold;
   color: #144E94;
+  font-weight: bold;
 }
 
 .contact {
   background-color: rgba(20, 78, 148, 0.2);
+}
+.contact .section_title > p > span, .contact label > span {
+  color: #880000;
+}
+.contact .section_title p {
+  margin: 0 auto;
+  width: 260px;
 }
 .contact_form {
   position: relative;
   margin: 0 auto;
   width: 600px;
   height: 500px;
+}
+@media screen and (max-width: 768px) {
+  .contact_form {
+    padding-bottom: 150px;
+    width: 300px;
+  }
 }
 .contact_form_title {
   width: 200px;
@@ -225,6 +362,18 @@ header {
   height: 40px;
   font-size: 18px;
 }
+@media screen and (max-width: 768px) {
+  .contact_form_box {
+    position: initial;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact_form_box {
+    box-sizing: border-box;
+    width: 300px;
+    height: 46px;
+  }
+}
 .contact_form_textarea {
   position: absolute;
   right: 0;
@@ -233,8 +382,32 @@ header {
   height: 200px;
   font-size: 18px;
 }
+@media screen and (max-width: 768px) {
+  .contact_form_textarea {
+    position: initial;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact_form_textarea {
+    box-sizing: border-box;
+    width: 300px;
+  }
+}
 .contact_box {
   margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .contact_box {
+    position: relative;
+    left: calc(50% - 182px);
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact_box {
+    left: calc(50% - 150px);
+  }
 }
 .contact_box:last-child {
   margin-bottom: 0;
@@ -252,15 +425,20 @@ header {
   font-size: 18px;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .contact_btn {
+    bottom: -20px;
+  }
+}
 
 footer {
   background-color: #082F50;
 }
 footer p {
-  font-size: 12px;
+  padding: 20px 0;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  font-size: 12px;
 }
 
 .top {
@@ -276,6 +454,13 @@ footer p {
   justify-content: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 768px) {
+  .about_content {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+}
 .about_img {
   width: 250px;
   height: 250px;
@@ -287,10 +472,21 @@ footer p {
   -o-object-position: left center;
      object-position: left center;
 }
+@media screen and (max-width: 768px) {
+  .about_img {
+    margin-bottom: 30px;
+  }
+}
 .about_text {
   position: relative;
   margin-left: 26px;
-  width: 530px;
+  max-width: 530px;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .about_text {
+    margin-left: 0;
+  }
 }
 .about_text h3 {
   display: inline-block;
@@ -299,10 +495,25 @@ footer p {
   font-size: 36px;
   line-height: 1;
 }
+@media screen and (max-width: 480px) {
+  .about_text h3 {
+    font-size: 30px;
+  }
+}
 .about_text .link_btn {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .about_text .link_btn {
+    bottom: -70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about_text .link_btn {
+    right: calc(50% - 64px);
+  }
 }
 
 .about_twitter {
@@ -319,11 +530,23 @@ footer p {
   border-bottom: 3px solid #00FFFA;
   font-size: 24px;
 }
+@media screen and (max-width: 480px) {
+  .service_text h3 {
+    font-size: 20px;
+  }
+}
 .service_text p {
   text-align: left;
 }
 .service_content {
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .service_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .service_content_item {
   display: inline-block;
@@ -333,25 +556,59 @@ footer p {
   background-color: #fff;
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .service_content_item {
+    padding: 20px;
+  }
+}
 .service_content .item1 {
   position: relative;
   z-index: 2;
   display: block;
   margin: 0 auto;
 }
+@media screen and (max-width: 1024px) {
+  .service_content .item1 {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .service_content .item1 {
+    left: -1.5%;
+  }
+}
 .service_content .item2 {
   margin-top: -200px;
+}
+@media screen and (max-width: 1024px) {
+  .service_content .item2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 .service_content .item3 {
   position: absolute;
   right: 0;
   margin-top: -200px;
 }
+@media screen and (max-width: 1024px) {
+  .service_content .item3 {
+    margin-top: 0;
+    position: initial;
+  }
+}
 
 .skill_list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .skill_list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 }
 .skill_item {
   display: flex;
@@ -362,6 +619,23 @@ footer p {
 .skill_item:nth-child(2n) {
   margin-left: 50px;
 }
+.skill_item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1024px) {
+  .skill_item {
+    max-width: 500px;
+    padding: 0 50px;
+  }
+  .skill_item:nth-child(2n) {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .skill_item {
+    padding: 0;
+  }
+}
 .skill_img {
   margin-right: 20px;
   width: 64px;
@@ -370,12 +644,22 @@ footer p {
 .skill_text {
   width: 400px;
 }
+@media screen and (max-width: 480px) {
+  .skill_text {
+    width: 200px;
+  }
+}
 .skill_text p {
   position: relative;
 }
 .skill_text p span {
   position: absolute;
   left: 150px;
+}
+@media screen and (max-width: 480px) {
+  .skill_text p span {
+    left: 100px;
+  }
 }
 .skill .sass i {
   padding-top: 8px;
@@ -385,16 +669,33 @@ footer p {
   position: relative;
   margin: 0 auto;
   padding-bottom: 200px;
-  width: 800px;
+  max-width: 800px;
+}
+@media screen and (max-width: 768px) {
+  .work_content {
+    padding-bottom: 130px;
+  }
 }
 .work_list {
   display: flex;
   justify-content: space-between;
   margin: 100px auto 0;
-  width: 800px;
+  max-width: 800px;
+}
+@media screen and (max-width: 768px) {
+  .work_list {
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work_item {
+    margin-bottom: 50px;
+  }
 }
 .work_item_img {
-  width: 350px;
+  max-width: 350px;
   height: 240px;
 }
 .work_item_img img {
@@ -414,4 +715,9 @@ footer p {
   position: absolute;
   right: 0;
   bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  .work .link_btn {
+    right: calc(50% - 76px);
+  }
 }
