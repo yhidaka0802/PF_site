@@ -113,10 +113,13 @@ header {
     color: $cRed;
   }
 
-  .section_title p {
-    margin: 0 auto;
-    width: 260px;
+  @include mq(sp){
+    .section_title p {
+      margin: 0 auto;
+      width: 260px;
+    }
   }
+  
   &_form {
     position: relative;
     margin: 0 auto;

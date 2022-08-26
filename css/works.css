@@ -334,9 +334,11 @@ header {
 .contact .section_title > p > span, .contact label > span {
   color: #880000;
 }
-.contact .section_title p {
-  margin: 0 auto;
-  width: 260px;
+@media screen and (max-width: 480px) {
+  .contact .section_title p {
+    margin: 0 auto;
+    width: 260px;
+  }
 }
 .contact_form {
   position: relative;
@@ -439,6 +441,10 @@ footer p {
   color: #fff;
   text-align: center;
   font-size: 12px;
+}
+
+header {
+  background-color: #fff;
 }
 
 nav a {

@@ -2,12 +2,12 @@
   &_content{
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 
     @include mq(tb){
       flex-direction: column;
       align-items: center;
-      margin-bottom: 100px;
+      margin-bottom: 150px;
     }
   }
   
@@ -39,7 +39,7 @@
     h3 {
       display: inline-block;
       padding-bottom: 4px;
-      border-bottom: 1px solid $cLight_Blue;
+      border-bottom: 3px solid $cLight_Blue;
       font-size: 36px;
       line-height: 1;
       @include mq(sp){
@@ -63,8 +63,15 @@
 }
 
 .about_twitter {
+  max-width: 800px;
   margin: 0 auto;
-  width: 80%;
-  height: 30vh;
-  border: 1px solid $cBlack;
+  height: 400px;
+  text-align: center;
+
+  @include mq(tb){
+    max-width: 530px;
+  }
+  iframe {
+    margin: 0 auto;
+  }
 }

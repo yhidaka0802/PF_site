@@ -334,9 +334,11 @@ header {
 .contact .section_title > p > span, .contact label > span {
   color: #880000;
 }
-.contact .section_title p {
-  margin: 0 auto;
-  width: 260px;
+@media screen and (max-width: 480px) {
+  .contact .section_title p {
+    margin: 0 auto;
+    width: 260px;
+  }
 }
 .contact_form {
   position: relative;
@@ -452,13 +454,13 @@ footer p {
 .about_content {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 @media screen and (max-width: 768px) {
   .about_content {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 }
 .about_img {
@@ -491,7 +493,7 @@ footer p {
 .about_text h3 {
   display: inline-block;
   padding-bottom: 4px;
-  border-bottom: 1px solid #00FFFA;
+  border-bottom: 3px solid #00FFFA;
   font-size: 36px;
   line-height: 1;
 }
@@ -517,10 +519,18 @@ footer p {
 }
 
 .about_twitter {
+  max-width: 800px;
   margin: 0 auto;
-  width: 80%;
-  height: 30vh;
-  border: 1px solid #000;
+  height: 400px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .about_twitter {
+    max-width: 530px;
+  }
+}
+.about_twitter iframe {
+  margin: 0 auto;
 }
 
 .service_text h3 {
@@ -643,21 +653,28 @@ footer p {
 }
 .skill_text {
   width: 400px;
+  position: relative;
 }
 @media screen and (max-width: 480px) {
   .skill_text {
     width: 200px;
   }
 }
-.skill_text p {
-  position: relative;
+.skill_text h3 {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-bottom: 4px;
 }
-.skill_text p span {
+.skill_text span {
   position: absolute;
+  top: 0;
   left: 150px;
 }
 @media screen and (max-width: 480px) {
-  .skill_text p span {
+  .skill_text span {
     left: 100px;
   }
 }

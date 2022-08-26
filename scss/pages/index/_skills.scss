@@ -43,17 +43,25 @@
 
   &_text {
     width: 400px;
+    position: relative;
     @include mq(sp){
       width: 200px;
     }
-    p {
-      position: relative;
-      span {
-        position: absolute;
-        left: 150px;
-        @include mq(sp){
-          left:  100px;
-        }
+    h3 {
+      display: inline-block;
+      font-weight: normal;
+      // border-bottom: 3px solid $cBlue_thin;
+      line-height: 1;
+      padding-bottom: 2px;
+      padding-top: 2px;
+      margin-bottom: 4px;
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 150px;
+      @include mq(sp){
+        left:  100px;
       }
     }
   }

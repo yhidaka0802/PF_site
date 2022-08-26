@@ -7,6 +7,10 @@
 @import "../animation";
 @import "../common";
 
+header {
+  background-color: $cWhite;
+}
+
 nav {
   a{
     color: $cBlue;
