@@ -7,33 +7,52 @@
 @import "../animation";
 @import "../common";
 
-header {
-  background-color: $cWhite;
-}
+.top {
+  height: 100vh;
+  background-color: transparent;
 
-nav {
-  a{
-    color: $cBlue;
+  &_wrapper{
+    background-image: url('/images/works.jpg');
+    background-repeat: no-repeat;
+    background-position: 40% 50%;
+    background-size: cover;
+    position: fixed;
+    z-index: -3;
+    width: 100%;
   }
-}
 
-.openbtn {
-  border: 3px solid $cBlue;
+  &_filter{
+    background-color: $cBlue_top;
+  }
 
-  span {
-    background-color: $cBlue;
+  &_title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    h1 {
+      line-height: 2;
+    }
+    
+    span{
+      color: $cWhite;
+      font-size: 24px;
+    }
   }
 }
 
 .work {
-  padding-top: 100px;
+  padding-top: 70px;
 
   @include mq(tb){
     padding-top: 50px;
   }
   
   .section_title {
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     @include mq(tb){
       margin-bottom: 50px;
     }
@@ -41,14 +60,16 @@ nav {
 
   &_item {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     max-width: 1000px;
-    margin: 0 auto 30vh;
+    margin: 0 auto 15vh;
     @include mq(tb){
-      flex-direction: column-reverse;
-      align-items: center;
-      gap: 50px;
-      margin-bottom: 10vh;
+      // flex-direction: column-reverse;
+      // align-items: center;
+      // gap: 50px;
+      // margin-bottom: 10vh;
     }
     
     &:last-child {
@@ -57,13 +78,13 @@ nav {
 
     &_text {
       max-width: 550px;
-      padding-right: 50px;
-      @include mq(tb){
-        padding-right: 0;
-      }
 
       &_content {
         margin-bottom: 30px;
+        a:hover {
+          color: $cBlue;
+          border-bottom: 1px solid $cBlue;
+        }
       }
       h3 {
         font-size: 24px;
@@ -85,10 +106,14 @@ nav {
     }
 
     &_img {
-      max-width: 380px;
-      height: 240px;
-      img {
+      max-width: 800px;
+      margin-bottom: 20px;
 
+      a:hover {
+        opacity: 0.8;
+      }
+
+      img {
         object-fit: cover;
       }
     }

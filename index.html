@@ -15,9 +15,9 @@
     <script src="https://kit.fontawesome.com/59dfdf403e.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
+    <header class="js-header">
       <div class="header_wrapper">
-        <a href="index.html"><img src="/images/logo_1.png" alt="ロゴ画像"></a>
+        <a href="index.html"><img class="header_img1" src="/images/logo_1.png" alt="ロゴ画像"><img class="header_img2" src="/images/logo_2.png" alt="ロゴ画像"></a>
         <nav id="g-nav">
           <ul>
             <li><a href="/index.html">HOME</a></li>
@@ -31,7 +31,14 @@
     </header>
     <main>
       <section class="top">
-        <h1>Y.Hidaka Portfolio</h1>
+        <div class="top_title">
+          <h1>Y.Hidaka Portfolio</h1>
+        </div>
+        <div class="top_wrap">
+          <video src="images/5659_640x360.mov" autoplay loop muted playsinline>
+            <img src="images/top_alt.jpg" alt="placeholder">
+          </video>
+        </div>
       </section>
       <section class="about">
         <div class="wrapper">
@@ -39,15 +46,15 @@
             <h2>About</h2>
             <span>自己紹介</span>
           </div>
-          <div class="about_content">
+          <div class="about_content blurTrigger">
             <div class="about_img"><img src="/images/profile_img.png" alt="プロフィール画像"></div>
             <div class="about_text">
               <h3>Yu Hidaka</h3>
               <p>宮崎県出身の27歳。<br>国立大学・大学院　理系学部を卒業後、メーカー勤務。<br>IT ✕ デザインにより、直接的にお客様の役に立てるwebデザイナーの仕事に興味を持ち、独学にてwebデザインの勉強を開始。</p>
-              <div class="link_btn"><a href="/html/profile.html">More Detail</a></div>
+              <div class="link_btn"><a href="/html/profile.html">詳しく見る</a></div>
             </div>
           </div>
-          <div class="about_twitter">
+          <div class="about_twitter blurTrigger">
             <a class="twitter-timeline" data-lang="en" data-width="100%" data-height="400" data-theme="light" href="https://twitter.com/HID0802?ref_src=twsrc%5Etfw">Tweets by HID0802</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
         </div>
@@ -59,21 +66,21 @@
             <span>サービス内容</span>
           </div>
           <ul class="service_content">
-            <li class="service_content_item item1">
+            <li class="service_content_item item1 blurTrigger">
               <div class="service_img"><i class="fa-solid fa-desktop fa-7x"></i></div>
               <div class="service_text">
                 <h3>HP/LP制作</h3>
                 <p>ヒヤリングをもとに課題解決のためのデザインを作成し、コーディングで形にします。</p>
               </div>
             </li>
-            <li class="service_content_item item2">
+            <li class="service_content_item item2 blurTrigger">
               <div class="service_img"><i class="fa-solid fa-palette fa-7x"></i></div>
               <div class="service_text">
                 <h3>Webデザイン</h3>
                 <p>コーポレートサイトや店舗HPなどのデザインを作成いたします。<br>UIを意識したデザインをご提案いたします。</p>
               </div>
             </li>
-            <li class="service_content_item item3">
+            <li class="service_content_item item3 blurTrigger">
               <div class="service_img"><i class="fa-solid fa-file-code fa-7x"></i></div>
               <div class="service_text">
                 <h3>コーディング</h3>
@@ -89,7 +96,7 @@
             <h2>Skills</h2>
             <span>私のスキル</span>
           </div>
-          <ul class="skill_list">
+          <ul class="skill_list blurTrigger">
             <li class="skill_item">
               <div class="skill_img"><i class="fa-brands fa-html5 fa-4x"></i></div>
               <div class="skill_text">
@@ -165,14 +172,14 @@
           </div>
           <div class="work_content">
             <ul class="work_list">
-              <li class="work_item">
-                <div class="work_item_img"><img src="/images/pf_1.png" alt="ポートフォリオ画像１"></div>
+              <li class="work_item blurTrigger">
+                <div class="work_item_img"><img src="/images/pf_1b.png" alt="ポートフォリオ画像１"></div>
                 <div class="work_item_text">
                   <p>架空建築会社求人サイト（LP）</p>
                 </div>
               </li>
-              <li class="work_item">
-                <div class="work_item_img"><img src="/images/pf_2.png" alt="ポートフォリオ画像２"></div>
+              <li class="work_item blurTrigger">
+                <div class="work_item_img"><img src="/images/pf_2b.png" alt="ポートフォリオ画像２"></div>
                 <div class="work_item_text">
                   <p>架空ポートフォリオサイト（HP）</p>
                 </div>
@@ -183,31 +190,33 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <div class="wrapper">
-          <div class="section_title">
-            <h2>Contact</h2>
-            <span>お問い合わせ</span>
-            <p>各種依頼やご相談などございましたら、まずはお気軽にご連絡ください。<br><span>*</span>は入力必須項目です。</p>
+        <div class="contact_container">
+          <div class="wrapper">
+            <div class="section_title">
+              <h2>Contact</h2>
+              <span>お問い合わせ</span>
+              <p>各種依頼やご相談などございましたら、まずはお気軽にご連絡ください。<br><span>*</span>は入力必須項目です。</p>
+            </div>
+            <form action="#" class="contact_form zoomInTrigger" id="form">
+              <div class="contact_box">
+                <label for="name" class="contact_form_title">お名前<span>*</span></label>
+                <input type="text" class="contact_form_box" id="name" placeholder="山田太郎" required>
+              </div>
+              <div class="contact_box">
+                <label for="e-mail" class="contact_form_title">メールアドレス<span>*</span></label>
+                <input type="text" class="contact_form_box" id="e-mail" placeholder="xxxxx@domain.com" required>
+              </div>
+              <div class="contact_box">
+                <label for="tel" class="contact_form_title">電話番号</label>
+                <input type="text" class="contact_form_box" placeholder="080-xxxx-xxxx" id="tel">
+              </div>
+              <div class="contact_box">
+                <label for="message" class="contact_form_title">お問い合わせ内容<span>*</span></label>
+                <textarea name="messafe" id="message" cols="30" rows="10" class="contact_form_textarea" placeholder="ご相談内容をご記入ください" required></textarea>
+              </div>
+              <button type="submit" class="contact_btn">Send</button>
+            </form>
           </div>
-          <form action="#" class="contact_form" id="form">
-            <div class="contact_box">
-              <label for="name" class="contact_form_title">お名前<span>*</span></label>
-              <input type="text" class="contact_form_box" id="name" placeholder="山田太郎" required>
-            </div>
-            <div class="contact_box">
-              <label for="e-mail" class="contact_form_title">メールアドレス<span>*</span></label>
-              <input type="text" class="contact_form_box" id="e-mail" placeholder="xxxxx@domain.com" required>
-            </div>
-            <div class="contact_box">
-              <label for="tel" class="contact_form_title">電話番号</label>
-              <input type="text" class="contact_form_box" placeholder="080-xxxx-xxxx" id="tel">
-            </div>
-            <div class="contact_box">
-              <label for="message" class="contact_form_title">お問い合わせ内容<span>*</span></label>
-              <textarea name="messafe" id="message" cols="30" rows="10" class="contact_form_textarea" placeholder="ご相談内容をご記入ください" required></textarea>
-            </div>
-            <button type="submit" class="contact_btn">Send</button>
-          </form>
         </div>
       </section>
     </main>

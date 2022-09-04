@@ -1,20 +1,31 @@
+// ヘッダー
 header {
-  // background-color: $cWhite;
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: 84.39px;
+  height: 70px;
 }
 
 .header {
+  &_img2 {
+    display: none;
+  }
+
   &_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 4% 0;
-    // background-color: $cBlue_thin;
     width: 92%;
-
+    
+    &>a{
+      line-height: 1;
+    }
+    
+    img {
+      width: 100px;
+    }
+    
     nav {
       li {
         display: inline-block;
@@ -73,6 +84,46 @@ header {
   }
 }
 
+
+// headerの色変換用
+header.change-color {
+  background-color: white;
+  transition: 0.3s;
+
+  
+  #g-nav {
+    li {
+      a {
+        color: $cBlue;
+
+        &::after {
+          background-color: $cBlue;
+        }
+      }
+    }
+  }
+
+  .header {
+    &_img1 {
+      display: none;
+    }
+
+    &_img2 {
+      display: block;
+    }
+  }
+
+  .openbtn {
+    border: 3px solid $cBlue;
+  
+    span {
+      background-color: $cBlue;
+    }
+  }
+}
+
+
+// 共通部品
 .wrapper {
   margin: 0 auto;
   padding: 10vh 2%;
@@ -98,17 +149,25 @@ header {
 
 .link_btn {
   display: inline-block;
-  padding: 10px 20px;
   border: 1px solid $cBlack;
   a {
     color: $cBlue;
     font-weight: bold;
+    display: block;
+    padding: 10px 40px;
   }
 }
 
-.contact {
-  background-color: $cBlue_contact;
 
+// コンタクト
+.contact {
+  &_container {
+    background-color: $cBlue_contact;
+  }
+
+  .wrapper {
+    padding: 5vh 2%;
+  }
   .section_title>p>span, label>span{
     color: $cRed;
   }
@@ -193,15 +252,22 @@ header {
   &_btn {
     position: absolute;
     bottom: 0;
-    left: calc(50% - 63px);
+    left: calc(50% - 78px);
     display: inline-block;
-    padding: 10px 40px;
+    padding: 12px 55px;
     border: 1px solid $cBlack;
+    border-radius: 32px;
     background-color: $cWhite;
     color: $cBlue;
     font-weight: bold;
     font-size: 18px;
     cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $cBlue;
+      color: $cWhite;
+    }
 
     @include mq(tb){
       bottom: -20px;
@@ -209,6 +275,8 @@ header {
   }
 }
 
+
+// フッター
 footer {
   background-color: $cBlue_footer;
   p {

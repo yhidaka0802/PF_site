@@ -48,15 +48,24 @@
     }
 
     .link_btn {
+      text-align: center;
+      font-size: 16px;
+      border-radius: 32px;
       position: absolute;
       right: 0;
       bottom: 0;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: $cBlue;
+        a {
+          color: $cWhite;
+        }
+      }
 
       @include mq(tb){
         bottom: -70px;
-      }
-      @include mq(sp){
-        right: calc(50% - 64px);
+        right: calc(50% - 81px);
       }
     }
   }
